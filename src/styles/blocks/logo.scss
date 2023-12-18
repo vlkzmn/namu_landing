@@ -1,0 +1,7 @@
+.logo {
+  display: block;
+  width: 123px;
+  height: 40px;
+
+  @include bgImage(contain, icons, namu, svg);
+}

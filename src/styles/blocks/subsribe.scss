@@ -1,0 +1,78 @@
+.subsribe {
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    @include onDesktop {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $_playfair;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+
+    @include onTablet {
+      font-size: 40px;
+    }
+
+    @include onDesktop {
+      width: 570px;
+      font-size: 48px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include onTablet {
+      width: 570px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $colorBlack;
+    outline: none;
+
+    @include onTablet {
+      width: 450px;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+    }
+
+    &:hover,
+    &:focus {
+      color: $colorOrange;
+      border-color: $colorOrange;
+
+      &::placeholder {
+        color: $colorOrange;
+      }
+    }
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+}
